@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model surveys {
+  id          Int      @id @default(autoincrement())
+  uuid        String   @db.VarChar(100)
+  question    String   @db.VarChar(100)
+  answer      String   @db.VarChar(100)
+  answer_date DateTime @default(now()) @db.DateTime(6)
+}
