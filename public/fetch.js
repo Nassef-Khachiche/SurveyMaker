@@ -72,15 +72,17 @@ function getData() {
             next_button.classList.add('d-none');
         }
 
-        /* the saved surveys */
-        let tableDB = createTableRows(savedQuestions);
-        db_box.appendChild(tableDB);
-
         if (savedQuestions == undefined) 
         {
             db_box.classList.remove('d-block');
             db_box.classList.add('d-none');
         }
+
+        /* the saved surveys */
+        let tableDB = createTableRows(savedQuestions);
+        db_box.appendChild(tableDB);
+
+
 
         /* create a table in javascript with elemts fetched form /survey/get-data */
         let table = createTableRows(filledQuestions);

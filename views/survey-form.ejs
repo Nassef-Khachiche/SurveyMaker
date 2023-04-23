@@ -10,7 +10,7 @@
 </head>
 <body style="background-color: rgb(240, 241, 255);">
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5" >
-        <div class="card border-0 shadow w-75 p-4">
+        <div class="card border-0 shadow w-75 pb-3">
             <h5 class="card-header uuid fw-bold"></h5>
             <div class="card-body">
               <h5 class="card-title step"></h5>
@@ -24,12 +24,12 @@
                 </form>
             </div>
 
-            <form id="reset-form" action="/survey/reset-data" method="GET">
-                <button type="submit" class="btn btn-danger ms-3 save d-block">Reset</button>
-            </form>
-
             <form id="create-form" action="/survey/post-data" method="POST">
                 <button type="submit" class="btn btn-success m-3 save d-none">Save</button>
+            </form>
+
+            <form id="create-form" action="/survey/reset-data" method="GET">
+                <button type="submit" class="btn btn-danger ms-3 reset d-block">reset</button>
             </form>
 
             <h5 class="p-5 pb-0">Session table</h5>
